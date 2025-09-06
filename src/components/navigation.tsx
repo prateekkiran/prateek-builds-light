@@ -57,16 +57,16 @@ export function Navigation() {
         hidden: { y: "-100%" },
       }}
       animate={hidden ? "hidden" : "visible"}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4"
     >
-      <nav className="flex items-center gap-1 rounded-2xl border border-card-border bg-card/80 backdrop-blur-xl px-3 py-2 shadow-lg">
+      <nav className="flex items-center gap-1 rounded-full border border-border bg-card/95 backdrop-blur-md px-4 py-2 shadow-lg">
         <div className="flex items-center gap-1">
           {navigationItems.map((item) => (
             <button
               key={item.name}
               onClick={() => scrollToSection(item.href)}
-              className={`relative px-3 py-1.5 text-sm font-medium transition-colors rounded-lg ${
+              className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-full ${
                 activeSection === item.href.slice(1)
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
@@ -75,7 +75,7 @@ export function Navigation() {
               {activeSection === item.href.slice(1) && (
                 <motion.div
                   layoutId="activeSection"
-                  className="absolute inset-0 bg-primary/10 rounded-lg"
+                  className="absolute inset-0 bg-primary/10 rounded-full"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
               )}
@@ -83,7 +83,7 @@ export function Navigation() {
             </button>
           ))}
         </div>
-        <div className="ml-2 pl-2 border-l border-card-border">
+        <div className="ml-2 pl-3 border-l border-border">
           <ThemeToggle />
         </div>
       </nav>

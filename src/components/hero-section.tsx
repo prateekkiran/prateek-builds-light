@@ -35,22 +35,22 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+        <div className="max-w-5xl mx-auto text-center space-y-12">
           {/* Greeting */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-4"
+            transition={{ duration: 0.8 }}
+            className="space-y-6"
           >
-            <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-[0.9]">
               Hi, I'm{" "}
               <span className="bg-gradient-hero bg-clip-text text-transparent">
                 Prateek Kiran
               </span>{" "}
               👋
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+            <p className="text-xl md:text-2xl text-muted-foreground font-medium max-w-3xl mx-auto">
               Product Leader • SaaS Builder • AI & LLM Innovator
             </p>
           </motion.div>
@@ -59,7 +59,7 @@ export function HeroSection() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
           >
             From zero to traction: SaaS products powered by strategy, AI, and crisp execution.
@@ -69,12 +69,12 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button
               size="lg"
-              className="bg-gradient-primary hover:opacity-90 text-white shadow-primary group"
+              className="bg-gradient-primary hover:opacity-90 text-white shadow-primary group px-8 py-3 text-base"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Let's Build the Future
@@ -83,7 +83,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-card-border hover:bg-card/50 group"
+              className="border-border hover:bg-muted/50 group px-8 py-3 text-base"
             >
               <Download className="mr-2 h-4 w-4" />
               View Interactive Resume
@@ -95,10 +95,10 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="pt-16"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="pt-20"
           >
-            <div className="relative h-20 flex items-center justify-center">
+            <div className="relative h-24 flex items-center justify-center">
               {metrics.map((metric, index) => (
                 <motion.div
                   key={index}
@@ -112,10 +112,10 @@ export function HeroSection() {
                     currentMetric === index ? "pointer-events-auto" : "pointer-events-none"
                   }`}
                 >
-                  <div className="text-3xl md:text-4xl font-bold text-primary font-display">
+                  <div className="text-4xl md:text-5xl font-bold text-primary font-display">
                     {metric.value}
                   </div>
-                  <div className="text-sm md:text-base text-muted-foreground mt-1">
+                  <div className="text-sm md:text-base text-muted-foreground mt-2">
                     {metric.label}
                   </div>
                 </motion.div>
@@ -123,7 +123,7 @@ export function HeroSection() {
             </div>
 
             {/* Metric Indicators */}
-            <div className="flex justify-center space-x-2 mt-6">
+            <div className="flex justify-center space-x-2 mt-8">
               {metrics.map((_, index) => (
                 <button
                   key={index}
@@ -144,11 +144,11 @@ export function HeroSection() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1 }}
+        transition={{ duration: 0.8, delay: 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center"
         >
